@@ -8,9 +8,10 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
-    const { type, status = 'available', page = 1, limit = 12 } = req.query;
+    const { type, status = 'available', page = 1, limit = 12, condition } = req.query;
     const filter = { status };
     if (type) filter.type = type;
+    if (condition) filter.condition = condition;
 
     const skip = (Number(page) - 1) * Number(limit);
     const [items, total] = await Promise.all([
