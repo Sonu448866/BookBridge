@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+
+# Uploads (user-generated files)
+backend/uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test / cache
+coverage/
+.cache/
+.vite/
+
+# Local tooling
+.cursor/

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.local
+.env.production
+
+# User uploads (when not using Cloudinary)
+uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
