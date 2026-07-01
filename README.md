@@ -21,6 +21,7 @@ BookBridge/
 
 ```bash
 cd backend
+cp .env.example .env
 # Edit .env with your MongoDB URI and secrets
 npm install
 npm run dev
@@ -32,6 +33,7 @@ API runs at `http://localhost:5000`
 
 ```bash
 cd frontend
+cp .env.example .env
 npm install
 npm run dev
 ```
@@ -55,7 +57,16 @@ App runs at `http://localhost:5173`
 
 ## Environment Variables
 
+See `backend/.env.example` and `frontend/.env.example` for required keys.
+
+**Never commit `.env` files.** See [DEPLOYMENT.md](./DEPLOYMENT.md) for production setup and security checklist.
+
 ## Tech Stack
 
 - **Frontend:** React 18, Vite, Tailwind CSS, Redux Toolkit, React Router, Axios, Socket.io Client
 - **Backend:** Node.js, Express, MongoDB/Mongoose, JWT, Bcrypt, Socket.io, Multer, Cloudinary, Nodemailer
+
+## Deployment
+
+- Frontend: Vercel (`npm run build`)
+- Backend: Render (set `NODE_ENV=production` for cluster mode)
